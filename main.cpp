@@ -1,5 +1,5 @@
-// Ruddyard Eduardo Castro Chavez
-//Hola
+// Ruddyard Eduardo Castro Chavez 9959-23-1409
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -12,8 +12,8 @@ using namespace std;
 #define numero_Candidatos 5
 #define yearElectorales 4
 #define numeroCiclos 5
-#define MAX_CALIFICACION 1000000
-#define MIN_CALIFICACION 0
+#define MAX_CALIFICACION 1000
+#define minVotos 0
 #define MAXIMA_LONGITUD_CADENA 100
 
 void llamaCiclo();
@@ -98,13 +98,13 @@ void llenarMatriz(float matriz[numero_Candidatos][numeroCiclos + 1])
         {
             if (x == 0 || x == 3)  //primer cicloelectoral
             {
-                calificacion = busquedaAleatorios(MIN_CALIFICACION, 20);
+                calificacion = busquedaAleatorios(minVotos, 200);
             } else if (x == 1)  //segundo cicloelectoral
             {
-                calificacion = busquedaAleatorios(MIN_CALIFICACION, 25);
+                calificacion = busquedaAleatorios(minVotos, 250);
             } else if (x == 2)  //examen final
             {
-                calificacion = busquedaAleatorios(MIN_CALIFICACION, 35);
+                calificacion = busquedaAleatorios(minVotos, 350);
             }
             suma += (float)calificacion;
             matriz[y][x] = calificacion;
