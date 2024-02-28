@@ -1,0 +1,30 @@
+$ git log
+commit 99783dc09e60b9feef9f489a77e2b515639a02f5 (HEAD -> main, origin/main)
+Author: Ruddyard_Castro <rcastroc2@miumg.edu.gt>
+Date:   Wed Feb 28 10:54:57 2024 -0600
+
+    Mi ultimo comit
+
+commit 05b89b8c0cf1606f95c1cdfb8eefcdb6232db1ec
+Author: Ruddyard_Castro <rcastroc2@miumg.edu.gt>
+Date:   Wed Feb 28 10:25:42 2024 -0600
+
+    Modificacion de maximos votos
+
+commit ce0f886e3efa19b2da03a3727637883dea6e41eb
+Author: Ruddyard_Castro <rcastroc2@miumg.edu.gt>
+Date:   Wed Feb 28 10:19:17 2024 -0600
+
+    Reasignacion de nombres de tabla y variables
+
+commit 91a4fc1a7e9a4a72f51b4b194a0ccf1d5d5a8726
+Author: Ruddyard_Castro <rcastroc2@miumg.edu.gt>
+Date:   Wed Feb 28 10:16:30 2024 -0600
+
+    Agregar cliclos electorales y cambar valres al imprirmr la tabla
+
+commit 560d689e455aa0728061cdb15ac45e6e2636ee66
+Author: Ruddyard_Castro <rcastroc2@miumg.edu.gt>
+Date:   Wed Feb 28 10:04:11 2024 -0600
+
+    Inicio del programa
