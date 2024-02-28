@@ -1,3 +1,4 @@
+
 // Ruddyard Eduardo Castro Chavez 9959-23-1409
 
 #include <stdio.h>
@@ -11,7 +12,7 @@ using namespace std;
 
 #define numero_Candidatos 5
 #define yearElectorales 4
-#define numeroCiclos 5
+#define numeroCiclos 4
 #define MAX_CALIFICACION 1000
 #define minVotos 0
 #define MAXIMA_LONGITUD_CADENA 100
@@ -50,13 +51,13 @@ void llamaCiclo()
         promedio_cicloElectoral_4=0;
         cout << "*** Comparativo de cicloElectorales ***" << endl << endl;
         llenarMatriz(matriz_cicloElectoral_1);
-        promedio_cicloElectoral_1 = imprimirMatriz(matriz_cicloElectoral_1, Candidatos, "cicloElectoral de 2017");
+        promedio_cicloElectoral_1 = imprimirMatriz(matriz_cicloElectoral_1, Candidatos, "cicloElectoral de Partido Republicano");
         llenarMatriz(matriz_cicloElectoral_2);
-        promedio_cicloElectoral_2 = imprimirMatriz(matriz_cicloElectoral_2, Candidatos, "cicloElectoral de 2019");
+        promedio_cicloElectoral_2 = imprimirMatriz(matriz_cicloElectoral_2, Candidatos, "cicloElectoral de Partido Democarata");
         llenarMatriz(matriz_cicloElectoral_3);
-        promedio_cicloElectoral_3 = imprimirMatriz(matriz_cicloElectoral_3, Candidatos, "cicloElectoral de 2019");
+        promedio_cicloElectoral_3 = imprimirMatriz(matriz_cicloElectoral_3, Candidatos, "cicloElectoral de Partido independiente");
         llenarMatriz(matriz_cicloElectoral_4);
-        promedio_cicloElectoral_4 = imprimirMatriz(matriz_cicloElectoral_4, Candidatos, "cicloElectoral de 2023");
+        promedio_cicloElectoral_4 = imprimirMatriz(matriz_cicloElectoral_4, Candidatos, "cicloElectoral de Partido por un futuro");
 
 
         if (promedio_cicloElectoral_1 > promedio_cicloElectoral_2 && promedio_cicloElectoral_1 > promedio_cicloElectoral_3)
@@ -98,13 +99,13 @@ void llenarMatriz(float matriz[numero_Candidatos][numeroCiclos + 1])
         {
             if (x == 0 || x == 3)  //primer cicloelectoral
             {
-                calificacion = busquedaAleatorios(minVotos, 200);
+                calificacion = busquedaAleatorios(minVotos, 1000000);
             } else if (x == 1)  //segundo cicloelectoral
             {
-                calificacion = busquedaAleatorios(minVotos, 250);
+                calificacion = busquedaAleatorios(minVotos, 1000000);
             } else if (x == 2)  //examen final
             {
-                calificacion = busquedaAleatorios(minVotos, 350);
+                calificacion = busquedaAleatorios(minVotos, 1000000);
             }
             suma += (float)calificacion;
             matriz[y][x] = calificacion;
@@ -141,14 +142,17 @@ float imprimirMatriz(float matriz[numero_Candidatos][numeroCiclos + 1], char Can
     memcpy(mayor, Candidatos[0], MAXIMA_LONGITUD_CADENA);
     memcpy(promMenor, Candidatos[0], MAXIMA_LONGITUD_CADENA);
     cout << nombrecicloElectoral << endl;
-    cout << "(PrimerCiclo)=>Primer cicloelectoral  (SegundoCiclo)=>Segundo cicloelectoral (Tercerciclo)=>Final (CuartoCiclo)=>Actividades" << endl;
     imprimirMatrizLinea();
-    cout << setw(9) << "Candidato";
+    cout << setw(9) << "Candidato ";
     for (x = 0; x < numeroCiclos; x++)
     {
-        cout << setw(9) << "Votos " << x + 1;
+
     }
-    cout << setw(8) << "Tot " << endl;
+    cout << setw(10) << "voto 2017 ";
+    cout << setw(10) << "voto 2019 ";
+    cout << setw(10) << "voto 2021 ";
+    cout << setw(10) << "voto 2023 ";
+    cout << setw(10) << "Total " << endl;
     imprimirMatrizLinea();
     for (y = 0; y < numero_Candidatos; y++)
     {
@@ -177,7 +181,7 @@ float imprimirMatriz(float matriz[numero_Candidatos][numeroCiclos + 1], char Can
     promedioGeneral = totalGeneral / numero_Candidatos;
     cout << " mayor: " << setw(10) << mayor <<  setw(10) << promedioMayor << endl;
     cout << " menor: " << setw(10) << promMenor <<  setw(10) << promedioMenor << endl;
-    cout << "Nota prom : " << setw(10) <<  promedioGeneral << endl << endl;
+    cout << " prom : " << setw(10) <<  promedioGeneral << endl << endl;
     return promedioGeneral;
 }
 
